@@ -54,3 +54,54 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+
+.journey-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fffafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+    .section h2 {
+        color: #c71585;
+        margin-bottom: 10px;
+    }
+
+    .section p, .section ul {
+        color: #333;
+        line-height: 1.6;
+    }
+
+.memory-card { /* same as before */
+}
+
+.love-button {
+    background: #ff69b4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .love-button:hover {
+        background: #ff85c1;
+    }
+
+.quote {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+}
+

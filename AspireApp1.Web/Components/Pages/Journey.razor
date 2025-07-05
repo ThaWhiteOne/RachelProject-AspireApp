@@ -1,0 +1,97 @@
+﻿<h3>Journey</h3>
+
+@page "/Journey"
+
+<PageTitle>Our Journey</PageTitle>
+
+<div class="journey-container">
+
+    <section class="section intro">
+        <h2>This Is From My Heart</h2>
+        <p>
+            I’ve made mistakes, I’ve hurt you, and I carry that with me.
+            But I also carry the love I feel for you every single day.
+            This space is my attempt to show you what words have failed to say.
+        </p>
+    </section>
+
+    <section class="section mistakes">
+        <h2>My Mistakes</h2>
+        <p>
+            I didn’t always listen.
+            I wasn’t always patient.
+            I took things for granted.
+            And I hurt you — the one person who means the most to me.
+            I’m deeply sorry.
+        </p>
+    </section>
+
+    <section class="section promises">
+        <h2>My Promises to You</h2>
+        <ul>
+            <li>To always be honest, even when it’s hard.</li>
+            <li>To cherish and protect what we have.</li>
+            <li>To never stop working to earn your trust again.</li>
+            <li>To grow into someone worthy of your love.</li>
+        </ul>
+    </section>
+
+    <section class="section memories">
+        <h2>Our Memories</h2>
+        <div class="memory-card">
+            <h3>First Date 🍕</h3>
+            <p class="date">March 15, 2023</p>
+            <p class="desc">The night everything felt natural. I knew you were someone special.</p>
+        </div>
+        <div class="memory-card">
+            <h3>Road Trip 🚗</h3>
+            <p class="date">June 2, 2023</p>
+            <p class="desc">No plan, just laughter and miles of love. One of my favorite days.</p>
+        </div>
+        <div class="memory-card">
+            <h3>Under the Stars ✨</h3>
+            <p class="date">August 19, 2023</p>
+            <p class="desc">We talked about forever. I still believe in it.</p>
+        </div>
+    </section>
+
+    <section class="section future">
+        <h2>Our Future</h2>
+        <p>
+            I still dream of traveling with you, dancing in our kitchen, and building a life side by side.
+            I know it won’t be easy — but I’ll be here for every step.
+            I won’t give up on us.
+        </p>
+    </section>
+
+    <section class="section surprise">
+        <h2>Whenever You Miss Me...</h2>
+        <button class="love-button" @onclick="ShowQuote">Miss you, I love you</button>
+        @if (!string.IsNullOrEmpty(currentQuote))
+        {
+            <p class="quote">“@currentQuote”</p>
+        }
+    </section>
+
+</div>
+
+@code {
+    string[] quotes = new[]
+    {
+        "You are my today and all of my tomorrows.",
+        "No matter what happens, you will always have my heart.",
+        "You make my world beautiful just by being in it.",
+        "Every moment without you is a moment I spend missing you.",
+        "I didn’t know what love was until I met you."
+    };
+
+    string currentQuote;
+
+    void ShowQuote()
+    {
+        var rng = new Random();
+        currentQuote = quotes[rng.Next(quotes.Length)];
+
+        // TODO: Optional: Add notification logic (email, webhook, etc.)
+    }
+}
