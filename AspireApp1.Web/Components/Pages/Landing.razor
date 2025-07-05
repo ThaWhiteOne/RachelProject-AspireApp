@@ -1,0 +1,27 @@
+﻿@page "/"
+@using AspireApp1.Web.Components.Layout
+@layout MainLayout
+
+<div class="landing-container">
+    <div class="landing-content">
+        <h1>For the love of my life ❤️</h1>
+        <p>
+            Hi, my love.<br />
+            I made this space just for you. It’s not perfect—just like me—but it’s honest and from the heart.<br />
+            Every word, every color, every moment here is meant to say: I miss you, I love you, and I will never stop trying for us.
+        </p>
+
+        <button class="start-button" @onclick="NavigateToJourney">Begin Our Journey</button>
+    </div>
+</div>
+
+@code {
+	// This method will navigate to the journey page when the button is clicked
+    private void NavigateToJourney()
+    {
+        NavigationManager.NavigateTo("/journey");
+    }
+
+    [Inject]
+    NavigationManager NavigationManager { get; set; }
+}
